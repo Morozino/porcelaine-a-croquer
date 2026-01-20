@@ -139,18 +139,32 @@ button:hover {
   font-weight: bold;
 }
 
-/* INSTAGRAM */
+/* ================= INSTAGRAM AMÉLIORÉ ================= */
+
 .instagram-feed {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  justify-items: center;
 }
 
-.instagram-feed img {
-  width: 220px;
+/* Limiter la taille des embeds Instagram */
+.instagram-feed blockquote.instagram-media {
+  max-width: 320px !important;
+  min-width: 280px !important;
+  margin: 0 !important;
   border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
+
+/* Sur desktop : rendu plus galerie */
+@media (min-width: 900px) {
+  .instagram-feed {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 
 /* PANIER */
 .cart {
@@ -179,4 +193,5 @@ footer {
   font-size: 0.9rem;
   color: #555;
 }
+
 
