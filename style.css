@@ -184,7 +184,7 @@ button:hover,
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  justify-items: center;
+  align-items: start;
 }
 
 .instagram-feed blockquote.instagram-media {
@@ -309,3 +309,4 @@ footer a:hover {
     grid-template-columns: 1fr;
   }
 }
+
