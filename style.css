@@ -1,10 +1,11 @@
-/* RESET */
+/* ================= RESET ================= */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* ================= BASE ================= */
 body {
   font-family: "Georgia", serif;
   background: #faf7f3;
@@ -12,10 +13,36 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER */
+a {
+  color: inherit;
+}
+
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #8b5e3c;
+  display: block;
+  margin: 15px auto 0;
+}
+
+/* ================= HEADER ================= */
 header {
   background: #f1e8de;
-  padding: 40px 20px;
+  padding: 45px 20px;
   text-align: center;
 }
 
@@ -33,12 +60,7 @@ header p {
   margin-top: 20px;
 }
 
-.header-links button,
-.header-links a {
-  margin: 5px;
-}
-
-/* NAV */
+/* ================= NAV ================= */
 nav {
   background: #8b5e3c;
   padding: 12px;
@@ -55,30 +77,38 @@ nav a {
   font-weight: bold;
 }
 
-/* SECTIONS */
-section {
-  padding: 80px 20px;
-  max-width: 1100px;
-  margin: auto;
-  text-align: center;
-}
-
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  position: relative;
-}
-
-section h2::after {
-  content: "";
-  width: 60px;
-  height: 3px;
+/* ================= BOUTONS ================= */
+button,
+.vinted-btn {
   background: #8b5e3c;
-  display: block;
-  margin: 15px auto 0;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.25s ease, transform 0.2s ease;
 }
 
-/* PRODUITS */
+button:hover,
+.vinted-btn:hover {
+  background: #734a2e;
+  transform: translateY(-2px);
+}
+
+.vinted-btn {
+  background: #09b1ba;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* ================= BOUTIQUE ================= */
+#shop {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -86,20 +116,21 @@ section h2::after {
 }
 
 .product {
-  background: white;
-  border-radius: 12px;
+  background: #fff;
+  border-radius: 14px;
   padding: 25px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .product:hover {
   transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
 
 .product img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
   margin-bottom: 15px;
 }
 
@@ -114,32 +145,11 @@ section h2::after {
   margin-bottom: 15px;
 }
 
-/* BOUTONS */
-button {
-  background: #8b5e3c;
-  color: white;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 6px;
-  cursor: pointer;
+/* ================= INSTAGRAM ================= */
+#instagram {
+  max-width: 1100px;
+  margin: 0 auto;
 }
-
-button:hover {
-  background: #734a2e;
-}
-
-.vinted-btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 14px;
-  background: #09b1ba;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-/* ================= INSTAGRAM AMÉLIORÉ ================= */
 
 .instagram-feed {
   display: grid;
@@ -148,7 +158,6 @@ button:hover {
   justify-items: center;
 }
 
-/* Limiter la taille des embeds Instagram */
 .instagram-feed blockquote.instagram-media {
   max-width: 320px !important;
   min-width: 280px !important;
@@ -158,15 +167,53 @@ button:hover {
   box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-/* Sur desktop : rendu plus galerie */
-@media (min-width: 900px) {
-  .instagram-feed {
-    grid-template-columns: repeat(3, 1fr);
-  }
+/* ================= GOOGLE PHOTOS ================= */
+#google-photos {
+  background: #f1e8de;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
+.google-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
 
-/* PANIER */
+.google-rating .stars {
+  color: #f4b400;
+  font-size: 1.1rem;
+}
+
+.google-rating .rating-text {
+  font-weight: bold;
+}
+
+.google-rating a {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.google-rating a:hover {
+  text-decoration: underline;
+}
+
+.google-desc {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #555;
+}
+
+/* ================= CONTACT ================= */
+#contact p {
+  margin-bottom: 10px;
+}
+
+/* ================= PANIER ================= */
 .cart {
   position: fixed;
   top: 0;
@@ -176,7 +223,7 @@ button:hover {
   background: #fff;
   padding: 20px;
   box-shadow: -5px 0 15px rgba(0,0,0,0.15);
-  transition: right 0.3s;
+  transition: right 0.3s ease;
   overflow-y: auto;
   z-index: 100;
 }
@@ -185,7 +232,16 @@ button:hover {
   right: 0;
 }
 
-/* FOOTER */
+.cart h3 {
+  margin-bottom: 20px;
+}
+
+.cart ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+/* ================= FOOTER ================= */
 footer {
   background: #f1e8de;
   padding: 30px;
@@ -194,4 +250,13 @@ footer {
   color: #555;
 }
 
+/* ================= RESPONSIVE ================= */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
 
+  section {
+    padding: 60px 15px;
+  }
+}
