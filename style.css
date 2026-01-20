@@ -190,7 +190,7 @@ button:hover,
   gap: 30px;
 
   justify-items: center; /* 👈 centrage horizontal */
-  align-items: end;      /* 👈 alignement bas (desktop) */
+  align-items: center;      /* 👈 alignement bas (desktop) */
 }
 
 .instagram-feed blockquote.instagram-media {
@@ -405,6 +405,24 @@ footer a:hover {
 }
 
 
+/* ===== INSTAGRAM : CENTRAGE MOBILE DEFINITIF ===== */
+@media (max-width: 768px) {
+
+  /* le conteneur prend toute la largeur */
+  .instagram-feed {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* centre les enfants */
+  }
+
+  /* chaque carte Instagram */
+  .instagram-feed > blockquote.instagram-media {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+}
 
 
 
