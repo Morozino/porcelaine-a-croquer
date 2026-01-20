@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Porcelaine à Croquer – Boutique officielle</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Porcelaine à Croquer – créations artisanales en porcelaine peintes à la main à Pau. Boutique en ligne, PayPal et Vinted.">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="cart.js"></script>
+  <script defer src="instagram.js"></script>
+</head>
+
+<body>
+
+<header>
+  <h1>Porcelaine à Croquer</h1>
+  <p>Créations en porcelaine peintes à la main – Pau</p>
+
+  <div class="header-links">
+    <a href="https://www.vinted.fr/member/292441947" target="_blank" class="vinted-btn">
+      Boutique Vinted
+    </a>
+    <button onclick="openCart()">🛒 Panier (<span id="cart-count">0</span>)</button>
+  </div>
+</header>
+
+<nav>
+  <a href="#shop">Boutique</a>
+  <a href="#instagram">Instagram</a>
+  <a href="#about">À propos</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- BOUTIQUE -->
+<section id="shop">
+  <h2>Nos créations</h2>
+
+  <div class="products">
+    <div class="product">
+      <img src="images/produits.jpg" alt="Service porcelaine peint main">
+      <h3>Service à dessert – pièce artisanale</h3>
+      <p class="price">139 €</p>
+
+      <button onclick="addToCart('Service à dessert', 139)">
+        Ajouter au panier
+      </button>
+
+      <a class="vinted-btn"
+         href="https://www.vinted.fr/member/292441947"
+         target="_blank">
+         Acheter sur Vinted
+      </a>
+    </div>
+
+    <div class="product">
+      <img src="images/produits.jpg" alt="Service café porcelaine">
+      <h3>Service à café peint à la main</h3>
+      <p class="price">99 €</p>
+
+      <button onclick="addToCart('Service à café', 99)">
+        Ajouter au panier
+      </button>
+
+      <a class="vinted-btn"
+         href="https://www.vinted.fr/member/292441947"
+         target="_blank">
+         Acheter sur Vinted
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section id="instagram">
+  <h2>Dernières créations</h2>
+  <div id="insta-feed" class="instagram-feed"></div>
+</section>
+
+<!-- À PROPOS -->
+<section id="about">
+  <h2>À propos</h2>
+  <p>
+    Porcelaine à Croquer est une boutique artisanale située à Pau.
+    Chaque création est peinte à la main avec soin, en pièces uniques
+    ou séries limitées. Vente en ligne, en boutique et sur Vinted.
+  </p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>📍 34 boulevard Barbanègre, 64000 Pau</p>
+  <p>📞 05 59 90 63 09</p>
+  <p>📧 porcelaineacroquerboutique@gmail.com</p>
+
+  <p>
+    👉 Retrouvez aussi la boutique sur  
+    <a href="https://www.vinted.fr/member/292441947" target="_blank">
+      Vinted
+    </a>
+  </p>
+</section>
+
+<!-- PANIER -->
+<div id="cart" class="cart">
+  <h3>Votre panier</h3>
+  <ul id="cart-items"></ul>
+  <p>Total : <strong><span id="cart-total">0</span> €</strong></p>
+
+  <!-- PAYPAL -->
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+    <input type="hidden" name="cmd" value="_cart">
+    <input type="hidden" name="upload" value="1">
+    <input type="hidden" name="business" value="TON_EMAIL_PAYPAL">
+    <input type="hidden" name="currency_code" value="EUR">
+
+    <div id="paypal-items"></div>
+
+    <input type="submit" value="Payer avec PayPal">
+  </form>
+
+  <button onclick="closeCart()">Fermer</button>
+</div>
+
+<footer>
+  © 2026 Porcelaine à Croquer – Boutique officielle  
+  <br>
+  <a href="https://www.vinted.fr/member/292441947" target="_blank">
+    Vinted
+  </a>
+</footer>
+
+</body>
+</html>
