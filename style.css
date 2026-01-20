@@ -446,6 +446,21 @@ footer a:hover {
   color: #8b5e3c;
 }
 
+/* ===== PAYPAL BUTTON ===== */
+.paypal-btn {
+  display: block;
+  margin: 20px 0;
+  padding: 12px;
+  background: #ffc439;
+  color: #111;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.paypal-btn:hover {
+  background: #f7b800;
+}
 
 
 
