@@ -188,7 +188,7 @@ button:hover,
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  align-items: start;
+  align-items: end;
 }
 
 .instagram-feed blockquote.instagram-media {
@@ -402,6 +402,21 @@ footer a:hover {
   fill: #8b5e3c;
 }
 
+/* ===== INSTAGRAM MOBILE : CENTRÉ ===== */
+@media (max-width: 768px) {
+
+  .instagram-feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .instagram-feed blockquote.instagram-media {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+}
 
 
 
